@@ -1,6 +1,7 @@
 *{
   margin: 0px;
 }
+
 nav{
   margin: 100px;
   display: flex;
@@ -14,7 +15,7 @@ nav{
 }
 .searchbar-conteiner{
   display: flex;
-  margin: 0 auto;
+  margin: 0px auto;
   padding: 0 20px;
   align-items: center;
 }
@@ -39,6 +40,14 @@ nav{
   height: 44px;
   color: white;
   padding: 10px 12px;
+}
+
+.pokedex-header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
 }
 .App {
   text-align: center;

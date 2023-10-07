@@ -6,7 +6,7 @@ const NavBar = () => {
     <div>
       <nav>
         <div>
-          <img alt="pokeapi-logo" src={logoimg} />
+          <img  className="navbar-img" alt="pokeapi-logo" src={logoimg} />
         </div>
       </nav>
     </div>
