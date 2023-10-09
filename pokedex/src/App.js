@@ -7,8 +7,11 @@ import Pokedex from "./componentes/Pokedex";
 
 
 function App() {
+  const [page, setPage] = useState(0);
+  const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(false);
   const [pokemons, setPokemons] = useState([]);
+
    
   const fetchPokemons = async () => {
     try {
