@@ -3,13 +3,14 @@ import Pokemon from "./Pokemon";
 import Pagination from "./Pagination";
 
 const Pokedex = (props) => {
-  const { pokemons, loading, page, totalPages,setPage} = props;
-  
+  const { pokemons, loading, page, totalPages, setPage } = props;
+
   const onLeftClickHandler = () => {
-    console.log("Clicou no botão esquerdo");
+    if(page > 0) setPage((prev) => prev - 1);
+
   };
   const onRightClickHandler = () => {
-    console.log("Clicou no botão direito");
+    if(page+1 !== totalPages) setPage((prev) => prev + 1);
   };
 
   return (
@@ -19,19 +20,19 @@ const Pokedex = (props) => {
       </div>
 
       <Pagination
-      page={page+1}
-      totalPages={totalPages}
-      onLeftClick={onLeftClickHandler}
-      onRightClick={onRightClickHandler} />
+        page={page + 1}
+        totalPages={totalPages}
+        onLeftClick={onLeftClickHandler}
+        onRightClick={onRightClickHandler}
+      />
       {loading ? (
         <div>Carregando, segura fera...</div>
       ) : (
         <div className="pokedex-grid">
-          {pokemons && pokemons.map((pokemon, index) => {
-            return (
-              <Pokemon key={index}  pokemon={pokemon}/>
-            );
-          })}
+          {pokemons &&
+            pokemons.map((pokemon, index) => {
+              return <Pokemon key={index} pokemon={pokemon} />;
+            })}
         </div>
       )}
     </div>
