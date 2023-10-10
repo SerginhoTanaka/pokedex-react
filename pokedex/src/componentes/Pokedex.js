@@ -1,8 +1,10 @@
 import React from "react";
 import Pokemon from "./Pokemon";
 import Pagination from "./Pagination";
+
 const Pokedex = (props) => {
-  const { pokemons, loading, page, totalPage } = props;
+  const { pokemons, loading, page, totalPages,setPage} = props;
+  
   const onLeftClickHandler = () => {
     console.log("Clicou no botão esquerdo");
   };
@@ -19,8 +21,8 @@ const Pokedex = (props) => {
       <Pagination
       page={page+1}
       totalPages={totalPages}
-      onLeftClick={onLeftClick}
-      onRightClick={onRightClick} />
+      onLeftClick={onLeftClickHandler}
+      onRightClick={onRightClickHandler} />
       {loading ? (
         <div>Carregando, segura fera...</div>
       ) : (

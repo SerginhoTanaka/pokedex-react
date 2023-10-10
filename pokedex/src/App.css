@@ -75,6 +75,7 @@ nav {
   justify-content: space-between;
   padding: 10px 10px 10px 0px;
   flex: 1;
+
 }
 
 .card-top {
@@ -100,6 +101,7 @@ nav {
   margin-right: 10px;
   text-transform: capitalize;
 }
+
 .App {
   text-align: center;
 }
